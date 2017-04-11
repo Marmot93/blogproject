@@ -21,7 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^blog/', include('blog.urls')
     url(r'^$',views.home,name='home'),
-    url(r'^page1',views.page1,name='page1')
 ]
 # 简单说 name 可以用于在 templates, models, views ……中得到对应的网址，
 # 相当于“给网址取了个名字，只要这个名字不变，网址变了也能通过名字获取到。
