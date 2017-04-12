@@ -1,4 +1,4 @@
-from .blog.models import Post
+from .blog.models import Post,Category
 from django import template
 
 
@@ -14,4 +14,7 @@ def get_recent_posts(num=5):
 def archives():
     return Post.objects.dates('created_time', 'month', order='DESC')
 
-#
+# 分类
+@register.simple_tag
+def get_categories():
+    return Category.objects.all()
