@@ -3,10 +3,12 @@ from .models import Post
 import markdown
 
 
+# 主页
 def index(request):
     post_list = Post.objects.all()
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
+# 详情页
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.body = markdown.markdown(post.body,
