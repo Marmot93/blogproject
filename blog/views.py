@@ -23,6 +23,10 @@ def detail(request, pk):
 def contact(request):
     return render(request,'blog/contact.html')
 
+# about
+def about(request):
+    return render(request,'blog/about.html')
+
 # 跳转到归档的主页
 def archives(request, year, month):
     # 更换主页文章列表为按月显示
