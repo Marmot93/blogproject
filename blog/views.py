@@ -19,6 +19,10 @@ def detail(request, pk):
                                   ])
     return render(request, 'blog/detail.html', context={'post': post})
 
+# contact
+def contact(request):
+    return render(request,'blog/contact.html')
+
 # 跳转到归档的主页
 def archives(request, year, month):
     # 更换主页文章列表为按月显示
