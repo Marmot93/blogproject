@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Black &amp; White</title>
+		<title>About Me</title>
 
 		<!-- meta -->
 		<meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load staticfiles %}
 
 	    <!-- css -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
 		<link rel="stylesheet" href="css/ionicons.min.css">
-		<link rel="stylesheet" href="css/pace.css">
-	    <link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="{% static 'blog/css/pace.css'%}">
+	    <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
 
 	    <!-- js -->
-	    <script src="js/jquery-2.1.3.min.js"></script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="js/pace.min.js"></script>
-	    <script src="js/modernizr.custom.js"></script>
+        <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
+        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'blog/js/pace.min.js' %}"></script>
+        <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
 	</head>
 
 	<body id="page">
@@ -26,7 +27,7 @@
 				<div class="row">
 					<div class="col-md-4 col-sm-5 col-xs-8">
 						<div class="logo">
-							<h1><a href="index.html"><b>Black</b> &amp; White</a></h1>
+							<h1><a href="index.html">About Me</a></h1>
 						</div>
 					</div><!-- col-md-4 -->
 					<div class="col-md-8 col-sm-7 col-xs-4">
@@ -40,7 +41,7 @@
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   								<ul class="nav navbar-nav navbar-right">
     								<li class="cl-effect-11"><a href="index.html" data-hover="Home">Home</a></li>
-    								<li class="cl-effect-11"><a href="full-width.html" data-hover="Blog">Blog</a></li>
+    								<li class="cl-effect-11"><a href="https://github.com/Marmot93" data-hover="GitHub" target="_blank">GitHub</a></li>
     								<li class="cl-effect-11"><a href="about.html" data-hover="About">About</a></li>
     								<li class="cl-effect-11"><a href="contact.html" data-hover="Contact">Contact</a></li>
   								</ul>
@@ -68,17 +69,31 @@
 						<article class="post">
 							<div class="entry-content clearfix">
 								<figure class="img-responsive-center">
-									<img class="img-responsive" src="img/me.jpg" alt="Developer Image">
+									<img class="img-responsive" src="http://img0.imgtn.bdimg.com/it/u=3473296462,677294876&fm=23&gp=0.jpg" alt="Developer Image">
 								</figure>
-								<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-								<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+								<p>
+                                    也不知道为什么，一直以来都喜欢解决问题，但是呢，并没有多少人相信。
+                                </p>
+                                <p>
+                                    总是渴望去做一些可以提高自己的事情，似乎只有这样生命才不会被浪费。
+                                </p>
+                                <p>
+                                    发现问题从不逃避，解决问题毫不犹豫，最主要的当然是最后成功解决问题的时候的成就感。</p>
+                                <p>
+                                    本来当老师也是好好的，帮助别人解决问题，看着自己的学生进步了，由衷的高兴。
+                                    做老师这么两年，最大的成就可能就是敢说：我带过的学生没有不进步的。深知转行很难，但是如果现在不追求一下，
+                                    后半生一定会憎恨自己吧。都是肩膀上一个脑袋，别人能行，我也可以！
+                                </p>
+                                <p>
+                                    "吾生也有涯，而知也无涯。以有涯随无涯，殆已！"很多人嘲笑老师只交给我们第一句，忽略了后面一句，但是，
+                                    明知道求知之路是危险的，难道就要放弃了么？stay hungry stay foolish。
+                                </p>
+                                <p>
+                                    对于朋友圈都不怎么发的我，写这么多娇情的话，也算是给这个博客留下一个小彩蛋吧。姑且认为点了About的人是愿意
+                                    了解我的人，而不是这个现在还很粗糙的博客，相信它也会和我一路，风雨同行。
+                                </p>
+                                <p align="right">2017-4-14 00:13</p>
 								<div class="height-40px"></div>
-								<h2 class="title text-center">Social</h2>
-								<ul class="social">
-									<li class="facebook"><a href="#"><span class="ion-social-facebook"></span></a></li>
-									<li class="twitter"><a href="#"><span class="ion-social-twitter"></span></a></li>
-									<li class="google-plus"><a href="#"><span class="ion-social-googleplus"></span></a></li>
-									<li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li>
 								</ul>
 							</div>
 						</article>
@@ -90,7 +105,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<p class="copyright">&copy; 2014 ThemeWagon.com</p>
+						<p class="copyright">&copy; 2017 Marmot</p>
 					</div>
 				</div>
 			</div>
@@ -102,7 +117,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="full-width.html">Blog</a></li>
+					<li class="cl-effect-11"><a href="https://github.com/Marmot93" data-hover="GitHub" target="_blank">GitHub</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
