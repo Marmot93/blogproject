@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),# 主页
     url(r'index.html$', views.index, name='index'),# HOME
     url(r'contact.html$', views.contact, name='contact'),# Contact
-    url(r'about.html$', views.about, name='about'),# about
+    url(r'about.html$', views.about, name='about'),# About
     url(r'^post/(?P<pk>[0-9]+)/$', views.detail, name='detail'),# 详情页
     # 例如如果用户访问 /archives/2017/3/，那么 archives 视图函数的实际调用为：archives(request, year=2017, month=3)
     url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.archives, name='archives'),# 归档页
