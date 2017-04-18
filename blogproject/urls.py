@@ -19,9 +19,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^blog/', include('blog.urls')
+    # url(r'^blog/', include('blog.urls'),
     url(r'', include('blog.urls')),
+    url(r'', include('comments.urls')),
 ]
 # 简单说 name 可以用于在 templates, models, views ……中得到对应的网址，
 # 相当于“给网址取了个名字，只要这个名字不变，网址变了也能通过名字获取到。
-# 尽可能的把应用本身的URL部署到内部，在这里做一个总的引用
+# 尽可能的把应用本身的URL部署到内部，在这里做一个总的引用。
