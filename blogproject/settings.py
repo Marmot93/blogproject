@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
-# 七牛云测试
+# 七牛云测试1 start
 QINIU_ACCESS_KEY = 'vKQNTxH_Za1JWGVllKRo7SI5oBmPIhVXIRjlE1oW'
 QINIU_SECRET_KEY = 'EYd-BgvxwD_OOGO9IFmqwY82h-rrX3nFOcABatR8'
 QINIU_BUCKET_NAME = 'marmot'
@@ -21,7 +21,7 @@ QINIU_SECURE_URL = False      #使用http
 
 PREFIX_URL = 'http://'
 
-# 七牛云测试
+# 七牛云测试1 end
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -134,13 +134,14 @@ USE_TZ = True
 # 本地static
 # STATIC_URL = '/static/'
 
-# 七牛云测试
-# 七牛云 static
-# STATIC_URL = QINIU_BUCKET_DOMAIN + '/static/'
+# 七牛云测试2 start
+# 七牛云上的static
+STATIC_URL = QINIU_BUCKET_DOMAIN + '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'qiniustorage.backends.QiniuStaticStorage'
 
 DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
-# 七牛云测试
+
+# 七牛云测试2 end
