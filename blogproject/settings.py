@@ -146,16 +146,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 # 本地static
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # 七牛云测试2 start
 # 七牛云上的static
-# STATIC_URL = QINIU_BUCKET_DOMAIN + '/static/'
-#
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#
-# STATICFILES_STORAGE = 'qiniustorage.backends.QiniuStaticStorage'
-#
-# DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
+STATIC_URL = QINIU_BUCKET_DOMAIN + '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_STORAGE = 'qiniustorage.backends.QiniuStaticStorage'
+
+DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
 
 # 七牛云测试2 end
