@@ -1,13 +1,17 @@
-
 from django.contrib import admin
 from .models import Post, Category, Tag
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'created_time', 'modified_time', 'category', 'author']
+    list_display = ['title', 'created_time', 'modified_time', 'category', 'author', 'excerpt']
 
 
-# 把新增的 PostAdmin 也注册进来
-admin.site.register(Post, PostAdmin)
-admin.site.register(Category)
-admin.site.register(Tag)
+@admin.register(Category)
+class Category(admin.ModelAdmin):
+    list_display = ['name']
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ['name']
