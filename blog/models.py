@@ -16,7 +16,8 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = '类别'
+        verbose_name = '类别'
+        verbose_name_plural = verbose_name
 
 
 class Tag(models.Model):
@@ -30,7 +31,8 @@ class Tag(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = '标签'
+        verbose_name = '标签'
+        verbose_name_plural = verbose_name
 
 
 class Post(models.Model):
@@ -73,4 +75,5 @@ class Post(models.Model):
         return reverse('blog:detail', kwargs={'pk': self.pk})
 
     class Meta:
-        verbose_name_plural = '文章'
+        verbose_name = '文章'
+        verbose_name_plural = verbose_name
