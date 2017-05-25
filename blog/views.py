@@ -41,12 +41,12 @@ def about(request):
 # 跳转到归档的主页
 def archives(request, year, month):
     # 更换主页文章列表为按月显示
-    post_list = Post.objects.filter(created_time__year=year, created_time__month=month)
+    post_list = Post.objects.filter(created_time__year=year, created_time__month=month).order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
 # 分类页
 def category(request, pk):
     cate = get_object_or_404(Category, pk=pk)
-    post_list = Post.objects.filter(category=cate)
+    post_list = Post.objects.filter(category=cate).order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
