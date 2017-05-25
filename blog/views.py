@@ -6,7 +6,7 @@ from comments.forms import CommentForm
 
 # 主页
 def index(request):
-    post_list = Post.objects.all()
+    post_list = Post.objects.all().order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
